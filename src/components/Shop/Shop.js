@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './Cart.css';
+import './Shop.css';
 import Product from '../Product/Product';
 
-const Cart = () => {
+const Shop = () => {
     const [products, setProducts] = useState([]);
     const [shop, setShop] = useState([]);
 
@@ -37,4 +37,4 @@ const Cart = () => {
     );
 };
 
-export default Cart;
+export default Shop;
