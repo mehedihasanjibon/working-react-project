@@ -7,6 +7,11 @@ const Product = (props) => {
     // console.log(props.product);
 
     const {img, name, ratings, seller, price} = props.product;
+    const handleAddToCart = props.handleAddToCart;
+
+    // const handleAddToCart = (product) => {
+    //     console.log("added product");
+    // }
 
     return (
         <div className='product'>
@@ -17,7 +22,7 @@ const Product = (props) => {
                 <p> Manufacturer : {seller} </p>
                 <p> Rating : {ratings} start </p>
             </div>
-            <button className='btn-cart'> 
+            <button onClick={() =>handleAddToCart(props.product)} className='btn-cart'> 
                 Add to Cart
                 <span> <FontAwesomeIcon icon={faShoppingCart} /> </span>
              </button>
