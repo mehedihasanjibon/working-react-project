@@ -11,6 +11,14 @@ const Cart = ({cart}) => {
             <h4> Order Summary </h4>
             <div>
                 <p> Selected Items: {cart.length}</p>
+                <p> Total Price: ${} </p>
+                <p> Total Shipping Charge: ${} </p>
+                <p> Tax: ${} </p>
+                <p> Grand Total: ${} </p>
+            </div>
+            <div>
+                <button className='clear-btn'> Clear Cart </button>
+                <button className='review-btn'> Review Order </button>
             </div>
         </div>
     );
