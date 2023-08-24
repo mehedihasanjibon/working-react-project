@@ -14,24 +14,49 @@ const Shop = () => {
         .then(data => setProducts(data))
     },[]);
 
+    // useEffect( () => {
+    //     // console.log(products);
+    //     const storedCart = getShoppingCart();
+    //     // console.log(storedCart);
+
+    //     // step 1: get id 
+    //     for(const id in storedCart){
+    //         // console.log(id);
+    //         // step 2: get the product by using id
+    //         const addedProduct = products.find(product => product.id === id);
+    //         // console.log(addedProduct);
+
+    //         // step 3: get quantity of the product
+    //         const quantity = storedCart[id]
+    //         addedProduct.quantity = quantity;
+    //         console.log(addedProduct);
+    //     }
+    // }, [products]);
+
     useEffect( () => {
-        // console.log(products);
         const storedCart = getShoppingCart();
         // console.log(storedCart);
 
-        // step 1: get id 
+        const savedCart = [];
+
+        // step: 1 get id of the addedProduct 
         for(const id in storedCart){
             // console.log(id);
-            // step 2: get the product by using id
+
+            // step 2: get product form products state by using id 
             const addedProduct = products.find(product => product.id === id);
+            // console.log('addedProduct' , addedProduct);
+            if(addedProduct){
+                // step 3: add quantity
+                const quantity = storedCart[id];
+                addedProduct.quantity = quantity;
+                // step 4: add the added product to the saved cart 
+                savedCart.push(addedProduct);
+            }
             // console.log(addedProduct);
-
-            // step 3: get quantity of the product
-            const quantity = storedCart[id]
-            addedProduct.quantity = quantity;
-            console.log(addedProduct);
         }
-
+        // step 5: set the cart 
+        setCart(savedCart);
     }, [products]);
 
     const handleAddToCart = (product) => {
