@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SingleCart from '../SingleCart/SingleCart';
 
 const Home = () => {
     const [movies, setMovies] = useState([]);
@@ -6,12 +7,19 @@ const Home = () => {
     useEffect( () => {
         fetch('data.json')
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setMovies(data))
     }, []);
 
     return (
         <div>
-            <h3> this is home content </h3>
+            <div className='movie-container'>
+                {
+                    movies.map(movie => <SingleCart
+                        key={movie.id}
+                        movie={movie}
+                    ></SingleCart>)
+                }
+            </div>
         </div>
     );
 };
