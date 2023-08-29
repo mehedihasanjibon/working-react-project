@@ -1,12 +1,24 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
-import Shop from './components/Shop/Shop';
+import Home from './components/Home/Home';
 
 const App = () => {
   return (
     <div>
-      <Header></Header>
-      <Shop></Shop>
+      <div className='header m-auto mb-3'>
+        <Header></Header>
+      </div>
+
+      <div>
+        <div className='home-container'>
+          <Home></Home>
+        </div>
+        <div className='sideCart'>
+
+        </div>
+      </div>
+
     </div>
   );
 };
