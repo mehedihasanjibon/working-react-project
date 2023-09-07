@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
-import Home from './components/Home/Home';
 import SideCart from './components/SideCart/SideCart';
+import Home from './components/Home/Home';
 
 const App = () => {
   return (
