@@ -6,7 +6,7 @@ import Home from './components/Home/Home';
 
 const App = () => {
   return (
-    <div>
+    <div className='container'>
       <div className='header m-auto mb-3'>
         <Header></Header>
       </div>
