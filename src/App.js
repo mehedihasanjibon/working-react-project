@@ -7,7 +7,7 @@ import SideCart from './components/SideCart/SideCart';
 const App = () => {
   return (
     <div className='container'>
-      <div className='header mb-3'>
+      <div className='header mb-3 mt-4'>
         <Header></Header>
       </div>
 
