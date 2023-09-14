@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SingleCart from '../SingleCart/SingleCart';
 
 const Home = () => {
     const [movies , setMovies] = useState([]);
@@ -11,7 +12,12 @@ const Home = () => {
 
     return (
         <div>
-            <h1> This is home page: {movies.length} </h1>
+            {
+                movies.map(movie => 
+                <SingleCart
+                     movie={movie}
+                ></SingleCart>)
+            }
         </div>
     );
 };
