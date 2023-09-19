@@ -10,17 +10,17 @@ const App = () => {
       <div className='header mb-3 mt-4'>
         <Header></Header>
       </div>
-
+      
       <div className='main row'>
-
         <div className='home-container col-md-8'>
           <Home></Home>
         </div>
+
         <div className='sideCart col-md-4 card'>
           <SideCart></SideCart>
         </div>
       </div>
-      
+
     </div>
   );
 };
