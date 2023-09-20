@@ -15,6 +15,7 @@ const Home = () => {
             <div className='movie-container'>
                 {
                     movies.map(movie => <SingleCart
+                        key={movie.id}
                         movie={movie}
                     ></SingleCart>)
                 }
